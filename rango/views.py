@@ -2,4 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-	return HttpResponse('Hey there partner ! -Rango')
+	# link = '<a href = "http://127.0.0.1:8000/rango/about/"> about page </a>'
+	# return HttpResponse('Hey there partner ! -Rango' + link)
+	context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
+	return render(request, 'rango/index.html', context = context_dict)
+
+def about(request):
+	link = '<a href = "http://127.0.0.1:8000/rango"> home page </a>'
+	return HttpResponse('This is the "about" page. -Rango' + link)
