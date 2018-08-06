@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- Loads static content -->
+
+<html>
+
+	<head>
+		<title>About</title>
+	</head>
+
+	<body>
+		<h1>About the Author</h1>
+		<div>
+			This website was created by the one and only: 
+			<strong>{{ author }}</strong><br />
+		</div>
+		
+		<div>
+			<a href="/rango/index/">Home</a><br />
+			<img src = "{% static 'images/me.jpg' %}"
+			     alt = "Picture of the author" />
+		</div>
+	</body>
+
+</html>

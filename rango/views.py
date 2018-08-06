@@ -8,5 +8,5 @@ def index(request):
 	return render(request, 'rango/index.html', context = context_dict)
 
 def about(request):
-	link = '<a href = "http://127.0.0.1:8000/rango"> home page </a>'
-	return HttpResponse('This is the "about" page. -Rango' + link)
+	context_dict = {'author':'Christopher Camacho'}
+	return render(request, 'rango/about.html', context = context_dict)
