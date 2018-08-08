@@ -21,6 +21,7 @@
 			<strong>{{ boldmessage }}</strong><br />
 		</div>
 
+		<h4>MOST LIKED CATEGORIES:</h4>
 		<div>
 			{% if categories %}
 			<ul>
@@ -35,21 +36,19 @@
 			{% endif %}
 		</div>
 
-		
-		<!-- <div>
+		<h4>MOST VIEWED PAGES:</h4>
+		<div>
 			{% if pages %}
 			<ul>
 				{% for page in pages %}
-					<li>
-						<a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
-					</li>
+					<li><a href="{{ page.url }}">{{ page.title }}</a></li>
 				{% endfor %}
 			</ul>
 			{% else %}
-			<strong>There are no categories present.</strong>
+				<strong>No viewed pages at the moment.</strong>
 			{% endif %}
+
 		</div>
- -->
 
 		
 		<div>
